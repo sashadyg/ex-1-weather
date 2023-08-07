@@ -7,9 +7,96 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  position: absolute;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  margin: 0;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.header {
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #149edc;
+}
+
+.header--container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header--logo {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.header--input {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 100%;
+  font-size: large;
+  padding: 0px 8px;
+}
+
+.header--input:focus {
+  outline: none;
 }
