@@ -1,16 +1,19 @@
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <header className="header">
+        <div className="header--container">
+          <p className="header--logo">WEATHER</p>
+
+          <input
+            type="text"
+            className="header--input"
+            placeholder="Enter a city"
+          />
+        </div>
+      </header>
+
+      <main></main>
+    </>
   );
 };
