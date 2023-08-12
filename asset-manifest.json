@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/sashadyg/ex-1-weather/static/css/main.619972d4.css",
-    "main.js": "/sashadyg/ex-1-weather/static/js/main.fe38c595.js",
-    "index.html": "/sashadyg/ex-1-weather/index.html",
-    "main.619972d4.css.map": "/sashadyg/ex-1-weather/static/css/main.619972d4.css.map",
-    "main.fe38c595.js.map": "/sashadyg/ex-1-weather/static/js/main.fe38c595.js.map"
+    "main.css": "/ex-1-weather/static/css/main.619972d4.css",
+    "main.js": "/ex-1-weather/static/js/main.fe38c595.js",
+    "index.html": "/ex-1-weather/index.html",
+    "main.619972d4.css.map": "/ex-1-weather/static/css/main.619972d4.css.map",
+    "main.fe38c595.js.map": "/ex-1-weather/static/js/main.fe38c595.js.map"
   },
   "entrypoints": [
     "static/css/main.619972d4.css",
