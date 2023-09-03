@@ -104,11 +104,66 @@ p {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   height: 100%;
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.dayChoose--section {
+  background-image: url(./components/utils/img/@1x-G5_sunny-intervals-day.jpg);
+}
+
+.dayChoose--itemCard__active {
+  background-color: white;
+  border-top: 8px solid #f26a30;
+  padding: 10px;
+}
+
+.dayChoose--itemCard__active {
+  width: 400px;
+}
+
+.itemCard--title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+.itemCard--info {
+  display: flex;
+}
+
+.itemCard--degrees__position {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemCard--degrees {
+  font-size: 24px;
+  font-weight: 500;
+  display: inline;
+  float: rigth;
+  text-align: end;
+  margin-right: 20px;
+}
+
+.itemCard--degrees__max {
+  font-weight: 700;
+}
+
+.itemCard--textBlock {
+  padding-left: 20px;
+  border-left: 1px solid gray;
+}
+
+.itemCard--text {
+  font-size: 20px;
+  font-weight: 400;
 }
