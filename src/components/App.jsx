@@ -16,8 +16,8 @@ export const App = () => {
       </header>
 
       <main>
-        <div className="container">
-          <section className="dayChoose--section">
+        <section className="dayChoose--section">
+          <div className="container">
             <h1 className="dayChoose--cityName">Cherkassy</h1>
 
             <ul className="dayChoose--list">
@@ -30,19 +30,25 @@ export const App = () => {
                       <use href={sprite + '#icon-sun'}></use>
                     </svg>
                     <div className="itemCard--degrees__position">
-                      <p className="itemCard--degrees itemCard--degrees__max">
-                        19°
-                      </p>
-                      <p className="itemCard--degrees itemCard--degrees__min">
-                        17°
+                      <span className="itemCard--degrees itemCard--degrees__max">
+                        23°
+                      </span>
+                      <span className="itemCard--degrees itemCard--degrees__min">
+                        13°
+                      </span>
+                    </div>
+
+                    <div className="itemCard--textBlock">
+                      <p className="itemCard--text">
+                        Sunny intervals and light winds
                       </p>
                     </div>
                   </div>
                 </div>
               </li>
             </ul>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
     </>
   );
