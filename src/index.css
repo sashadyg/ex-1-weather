@@ -119,6 +119,13 @@ p {
   background-image: url(./components/utils/img/@1x-G5_sunny-intervals-day.jpg);
 }
 
+.dayChoose--cityName {
+  font-size: 28px;
+  color: white;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
 .dayChoose--itemCard__active {
   background-color: white;
   border-top: 8px solid #f26a30;
