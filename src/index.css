@@ -223,3 +223,66 @@ p {
   width: 48px;
   height: 48px;
 }
+
+.forecastPerHour--list {
+  display: flex;
+}
+
+.forecastPerHour--list li:last-child {
+  border-right: 1px solid #ced0d1;
+}
+
+.forecastPerHour--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  border-left: 1px solid #ced0d1;
+  border-top: 3px solid white;
+  transition-property: border-top;
+  transition-duration: 200ms;
+}
+
+.forecastPerHour--item:hover {
+  border-top: 3px solid #f26a30;
+}
+
+.forecastPerHour--hour {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.forecastPerHour--hour__span {
+  font-weight: 700;
+}
+
+.forecastPerHour--icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 60px;
+  color: gray;
+}
+
+.forecastPerHour--degrees {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.forecastPerHour--precipitation {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.forecastPerHour--precipitation__procent {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+
+.forecastPerHour--icon__precipitation {
+  width: 20px;
+  height: 20px;
+  padding-right: 6px;
+}
