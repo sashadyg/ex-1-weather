@@ -2,11 +2,11 @@ import sprite from '../utils/svg/sprite.svg';
 import { ActiveCard } from './ActiveCard/ActiveCard';
 import { CasualCard } from './CasualCard/CasualCard';
 
-export const DayChooseSection = data => {
+export const DayChooseSection = props => {
   return (
     <section className="dayChoose--section">
       <div className="container">
-        <h1 className="dayChoose--cityName">Cherkassy</h1>
+        <h1 className="dayChoose--cityName">{props.cityName}</h1>
 
         <ul className="dayChoose--list">
           <ActiveCard />
