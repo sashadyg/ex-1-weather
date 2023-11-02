@@ -50,7 +50,7 @@ export const Header = props => {
 
                 return (
                   <li key={name} className="header--cities">
-                    {name}, {country === 'Russia' ? 'shit' : country}
+                    {name}, {country === 'Russia' ? 'swamp' : country}
                   </li>
                 );
               })
