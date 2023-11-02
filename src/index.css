@@ -67,6 +67,7 @@ p {
 }
 
 .header {
+  max-height: 71px;
   width: 100vw;
   position: relative;
   top: 0;
@@ -89,22 +90,42 @@ p {
   font-weight: 700;
 }
 
+.header--search {
+  width: 100%;
+}
+
 .header--Form {
   width: 100%;
 }
 
 .header--input {
   margin-left: 20px;
-  margin-bottom: 5px;
   margin-top: 5px;
   width: 100%;
-  height: 80%;
+  height: 50px;
   font-size: large;
   padding: 0px 8px;
 }
 
 .header--input:focus {
   outline: none;
+}
+
+.header--cities {
+  display: block;
+  width: 100%;
+  background-color: white;
+  margin-left: 21px;
+  padding: 8px 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ced0d1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.header--cities:hover,
+.header--cities:focus {
+  background-color: whitesmoke;
 }
 
 .container {
