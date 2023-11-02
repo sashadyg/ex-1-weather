@@ -3,6 +3,7 @@ import { DayChooseSection } from './DayChooseSection/DayChooseSection';
 import { ForecastPerHour } from './ForecastPerHour/ForecastPerHour';
 import { useState } from 'react';
 import fetchForecast from './fetch/fetchForecast';
+import fetchCities from './fetch/fetchCities';
 
 export const App = () => {
   const [cityName, setCityName] = useState('');
