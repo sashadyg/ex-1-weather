@@ -1,9 +1,18 @@
-import { Formik, Field, Form } from 'formik';
+import { useFormik } from 'formik';
 import fetchCities from 'components/fetch/fetchCities';
 import { useState } from 'react';
 
 export const Header = props => {
   const [citiesName, setCitiesName] = useState([]);
+
+  const formik = useFormik({
+    initialValues: {
+      cityName: '',
+    },
+    onSubmit: (values, actions) => {
+      actions.resetForm();
+    },
+  });
 
   async function handleChange(e) {
     const value = e.target.value.trim();
@@ -16,48 +25,60 @@ export const Header = props => {
     setCitiesName(cities);
   }
 
+  function chooseCity(e) {
+    const value = e.target.innerHTML;
+
+    props.getCityName(value);
+    setCitiesName([]);
+    formik.handleSubmit();
+  }
+
   return (
     <header className="header">
       <div className="header--container">
         <p className="header--logo">WEATHER</p>
 
         <div className="header--search">
-          <Formik
-            initialValues={{
-              cityName: props.cityName,
-            }}
-            onSubmit={values => {
-              console.log(values);
+          <form
+            className="header--Form"
+            onSubmit={e => {
+              formik.handleSubmit(e);
             }}
           >
-            <Form className="header--Form">
-              <Field
-                id="cityName"
-                name="cityName"
-                type="text"
-                className="header--input"
-                placeholder="Enter a city"
-                autoComplete="off"
-                onChange={handleChange}
-              />
-            </Form>
-          </Formik>
+            <input
+              id="cityName"
+              name="cityName"
+              type="text"
+              className="header--input"
+              placeholder="Enter a city"
+              autoComplete="off"
+              value={formik.values.cityName}
+              onChange={async e => {
+                formik.handleChange(e);
 
-          <ul>
+                handleChange(e);
+              }}
+            />
+
             {citiesName ? (
               citiesName.map(city => {
                 const { name, country } = city;
 
                 return (
-                  <li key={name} className="header--cities">
+                  <button
+                    type="submit"
+                    key={name}
+                    className="header--cities"
+                    onClick={chooseCity}
+                  >
                     {name}, {country === 'Russia' ? 'swamp' : country}
-                  </li>
+                  </button>
                 );
               })
             ) : (
               <></>
             )}
-          </ul>
+          </form>
         </div>
       </div>
     </header>
