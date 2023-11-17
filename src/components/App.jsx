@@ -7,13 +7,13 @@ import { useState } from 'react';
 export const App = () => {
   const [cityName, setCityName] = useState('');
 
-  function inputCity(city) {
+  function getCityName(city) {
     setCityName(city);
   }
 
   return (
     <>
-      <Header inputCity={inputCity} />
+      <Header getCityName={getCityName} />
 
       <main>
         <DayChooseSection cityName={cityName ? cityName : 'London'} />
