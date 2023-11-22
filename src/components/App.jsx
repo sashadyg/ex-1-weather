@@ -1,15 +1,15 @@
 import { Header } from './Header/Header';
 import { DayChooseSection } from './DayChooseSection/DayChooseSection';
 import { ForecastPerHour } from './ForecastPerHour/ForecastPerHour';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import fetchForecast from './fetch/fetchForecast';
 
 export const App = () => {
-  const [cityName, setCityName] = useState('London');
+  let cityName = '';
   const [forecast, setForecast] = useState({});
 
   async function changeCityName(city) {
-    setCityName(city);
+    cityName = city;
     setForecast(await getForecast(city));
   }
 
@@ -20,12 +20,20 @@ export const App = () => {
     return forecast;
   }
 
+  useEffect(() => {
+    async function fetchData() {
+      setForecast(await getForecast('London'));
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <Header changeCityName={changeCityName} />
 
       <main>
-        <DayChooseSection cityName={cityName} />
+        <DayChooseSection cityName={cityName ? cityName : 'London'} />
         <ForecastPerHour cityName={cityName ? cityName : 'London'} />
       </main>
     </>
