@@ -1,6 +1,6 @@
 import { Card } from './Card';
 
-export const ForecastPerHour = data => {
+export const ForecastPerHour = props => {
   return (
     <div className="container">
       <ul className="forecastPerHour--list">
