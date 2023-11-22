@@ -116,6 +116,7 @@ p {
 
 .header--cities {
   display: block;
+  text-align: left;
   width: 100%;
   background-color: white;
   margin-left: 20px;
