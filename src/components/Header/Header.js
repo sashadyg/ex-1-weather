@@ -26,9 +26,9 @@ export const Header = props => {
   }
 
   function chooseCity(e) {
-    const value = e.target.innerHTML;
+    const city = e.target.innerHTML;
 
-    props.getCityName(value);
+    props.changeCityName(city);
     setCitiesName([]);
     formik.handleSubmit();
   }
@@ -53,7 +53,7 @@ export const Header = props => {
               placeholder="Enter a city"
               autoComplete="off"
               value={formik.values.cityName}
-              onChange={async e => {
+              onChange={e => {
                 formik.handleChange(e);
 
                 handleChange(e);
