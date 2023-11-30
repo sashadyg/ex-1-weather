@@ -33,8 +33,14 @@ export const App = () => {
       <Header changeCityName={changeCityName} />
 
       <main>
-        <DayChooseSection cityName={cityName ? cityName : 'London'} />
-        <ForecastPerHour cityName={cityName ? cityName : 'London'} />
+        <DayChooseSection
+          cityName={cityName ? cityName : 'London'}
+          forecast={forecast}
+        />
+        <ForecastPerHour
+          cityName={cityName ? cityName : 'London'}
+          forecast={forecast}
+        />
       </main>
     </>
   );

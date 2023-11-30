@@ -3,6 +3,10 @@ import { ActiveCard } from './ActiveCard/ActiveCard';
 import { CasualCard } from './CasualCard/CasualCard';
 
 export const DayChooseSection = props => {
+  const { forecast } = props;
+
+  console.log(forecast);
+
   return (
     <section className="dayChoose--section">
       <div className="container">
