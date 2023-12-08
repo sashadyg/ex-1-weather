@@ -144,7 +144,7 @@ p {
 .itemCard--icon__active {
   width: 80px;
   height: 80px;
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
 
 .dayChoose--section {
