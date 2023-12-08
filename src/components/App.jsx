@@ -5,11 +5,10 @@ import { useState, useEffect } from 'react';
 import fetchForecast from './fetch/fetchForecast';
 
 export const App = () => {
-  let cityName = '';
   const [forecast, setForecast] = useState({});
+  let cityName = forecast?.location?.name;
 
   async function changeCityName(city) {
-    cityName = city;
     setForecast(await getForecast(city));
   }
 
@@ -21,12 +20,22 @@ export const App = () => {
   }
 
   useEffect(() => {
-    async function fetchData() {
-      setForecast(await getForecast('London'));
-    }
+    // async function fetchData() {
+    //   setForecast(await getForecast('London'));
+    // }
 
     fetchData();
   }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetchForecast('London');
+      // const result = await response.json();
+      setForecast(response);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   return (
     <>
