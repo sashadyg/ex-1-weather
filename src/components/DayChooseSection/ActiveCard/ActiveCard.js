@@ -1,26 +1,36 @@
 import sprite from '../../utils/svg/sprite.svg';
 
-export const ActiveCard = data => {
+export const ActiveCard = props => {
+  const { forecast } = props;
+
   return (
     <li className="dayChoose--item__active">
       <div className="dayChoose--itemCard__active">
         <h1 className="itemCard--title">Today</h1>
 
         <div className="itemCard--info__active">
-          <svg className="itemCard--icon__active">
+          {/* <svg className="itemCard--icon__active">
             <use href={sprite + '#icon-sun'}></use>
-          </svg>
+          </svg> */}
+
+          <img
+            className="itemCard--icon__active"
+            src={forecast?.current?.condition?.icon}
+            alt="Icon of weather"
+          />
           <div className="itemCard--degrees__position">
             <span className="itemCard--degrees itemCard--degrees__max itemCard--degrees__active">
-              23°
+              {Math.round(forecast?.forecast?.forecastday[0]?.day?.maxtemp_c)}°
             </span>
             <span className="itemCard--degrees itemCard--degrees__min itemCard--degrees__active">
-              13°
+              {Math.round(forecast?.forecast?.forecastday[0]?.day?.mintemp_c)}°
             </span>
           </div>
 
           <div className="itemCard--textBlock">
-            <p className="itemCard--text">Sunny intervals and light winds</p>
+            <p className="itemCard--text">
+              {forecast?.current?.condition?.text}
+            </p>
           </div>
         </div>
       </div>
