@@ -5,15 +5,13 @@ import { CasualCard } from './CasualCard/CasualCard';
 export const DayChooseSection = props => {
   const { forecast } = props;
 
-  console.log(forecast);
-
   return (
     <section className="dayChoose--section">
       <div className="container">
         <h1 className="dayChoose--cityName">{props.cityName}</h1>
 
         <ul className="dayChoose--list">
-          <ActiveCard />
+          <ActiveCard forecast={forecast} />
           <CasualCard />
           <CasualCard />
           <CasualCard />
