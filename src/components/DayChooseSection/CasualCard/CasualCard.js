@@ -1,22 +1,32 @@
-import sprite from '../../utils/svg/sprite.svg';
+import { getForecastDay } from 'components/utils/js/getForecastDay';
 
-export const CasualCard = data => {
+export const CasualCard = props => {
+  const { forecast, index } = props;
+
   return (
-    <li className="dayChoose--item">
+    <li
+      className="dayChoose--item"
+      onClick={props?.onClick}
+      index={props.index}
+    >
       <div className="dayChoose--itemCard">
-        <p className="itemCard--day">Fri 8th</p>
+        <p className="itemCard--day">
+          {index === 0 ? 'Today' : getForecastDay(forecast[index]?.date)}
+        </p>
 
         <div className="itemCard--info">
-          <svg className="itemCard--icon">
-            <use href={sprite + '#icon-sun'}></use>
-          </svg>
+          <img
+            className="itemCard--icon"
+            src={forecast[index]?.day?.condition?.icon}
+            alt="Icon of weather"
+          />
 
           <div className="itemCard--degrees__position">
             <span className="itemCard--degrees itemCard--degrees__max">
-              23°
+              {Math.round(forecast[index]?.day?.maxtemp_c)}°
             </span>
             <span className="itemCard--degrees itemCard--degrees__min">
-              13°
+              {Math.round(forecast[index]?.day?.mintemp_c)}°
             </span>
           </div>
         </div>
