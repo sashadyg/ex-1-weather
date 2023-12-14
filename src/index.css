@@ -169,6 +169,7 @@ p {
   padding: 10px;
   border-bottom: 1px solid #ced0d1;
   cursor: pointer;
+  border-left: 1px solid #ced0d1;
 }
 
 .dayChoose--item__active:hover .itemCard--title {
@@ -201,6 +202,7 @@ p {
   display: inline;
   float: rigth;
   text-align: end;
+  margin-left: 10px;
 }
 
 .itemCard--degrees__active {
