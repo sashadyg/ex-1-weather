@@ -61,13 +61,13 @@ export const Header = props => {
             />
 
             {citiesName ? (
-              citiesName.map(city => {
+              citiesName.map((city, index) => {
                 const { name, country } = city;
 
                 return (
                   <button
                     type="submit"
-                    key={name}
+                    key={index}
                     className="header--cities"
                     onClick={chooseCity}
                   >
