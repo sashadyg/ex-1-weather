@@ -260,6 +260,8 @@ p {
 
 .forecastPerHour--list {
   display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
 }
 
 .forecastPerHour--list li:last-child {
