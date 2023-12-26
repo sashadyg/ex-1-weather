@@ -6,6 +6,7 @@ import fetchForecast from './fetch/fetchForecast';
 
 export const App = () => {
   const [forecast, setForecast] = useState({});
+  const [currentDay, changeCurrentDay] = useState(0);
   let cityName = forecast?.location?.name;
 
   async function changeCityName(city) {
@@ -20,17 +21,12 @@ export const App = () => {
   }
 
   useEffect(() => {
-    // async function fetchData() {
-    //   setForecast(await getForecast('London'));
-    // }
-
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
       const response = await fetchForecast('London');
-      // const result = await response.json();
       setForecast(response);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -45,10 +41,13 @@ export const App = () => {
         <DayChooseSection
           cityName={cityName ? cityName : 'London'}
           forecast={forecast}
+          currentDay={currentDay}
+          changeCurrentDay={changeCurrentDay}
         />
         <ForecastPerHour
           cityName={cityName ? cityName : 'London'}
           forecast={forecast}
+          currentDay={currentDay}
         />
       </main>
     </>
