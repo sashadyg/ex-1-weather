@@ -1,19 +1,14 @@
 // import sprite from '../utils/svg/sprite.svg';
 import { ActiveCard } from './ActiveCard/ActiveCard';
 import { CasualCard } from './CasualCard/CasualCard';
-import { useState } from 'react';
 
 export const DayChooseSection = props => {
-  const [currentDay, changeCurrentDay] = useState(0);
   const forecast = props?.forecast?.forecast?.forecastday;
+  const currentDay = props.currentDay;
 
   const handleClick = e => {
-    // e.preventDefault();
-
-    changeCurrentDay(Number(e.currentTarget.getAttribute('index')));
+    props.changeCurrentDay(Number(e.currentTarget.getAttribute('index')));
   };
-
-  // console.log(forecast);
 
   return (
     <section className="dayChoose--section">
@@ -38,15 +33,6 @@ export const DayChooseSection = props => {
               />
             )
           )}
-          {/* <ActiveCard forecast={forecast} />
-          <CasualCard />
-          <CasualCard />
-          <CasualCard />
-          <CasualCard />
-          <CasualCard />
-          <CasualCard />
-          <CasualCard />
-          <CasualCard /> */}
         </ul>
       </div>
     </section>
