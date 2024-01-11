@@ -26,7 +26,7 @@ export const ActiveCard = props => {
             <span className="itemCard--degrees itemCard--degrees__max itemCard--degrees__active">
               {Math.round(forecast[currentDay]?.day?.maxtemp_c)}°
             </span>
-            <span className="itemCard--degrees itemCard--degrees__min itemCard--degrees__active">
+            <span className="itemCard--degrees itemCard--degrees__active">
               {Math.round(forecast[currentDay]?.day?.mintemp_c)}°
             </span>
           </div>
