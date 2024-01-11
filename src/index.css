@@ -1,4 +1,5 @@
 @import-normalize; /* bring in normalize.css styles */
+/* utils */
 
 body {
   margin: 0;
@@ -66,12 +67,29 @@ p {
   margin: 0;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 100%;
+}
+
+@media (max-width: 599px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+/* HEADER */
+
 .header {
   max-height: 71px;
   width: 100vw;
   position: relative;
   top: 0;
   left: 0;
+  padding-right: 10px;
   background-color: #149edc;
 }
 
@@ -82,6 +100,20 @@ p {
   height: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 599px) {
+  .header {
+    max-height: 111px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+  }
+
+  .header--container {
+    max-width: 90%;
+    display: block;
+    text-align: center;
+  }
 }
 
 .header--logo {
@@ -96,6 +128,7 @@ p {
 
 .header--Form {
   width: 100%;
+  position: relative;
 }
 
 .header--input {
@@ -108,6 +141,15 @@ p {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ced0d1;
+}
+
+@media (max-width: 599px) {
+  .header--input {
+    margin: 0;
+    height: 40px;
+    font-size: medium;
+    border-radius: 20px;
+  }
 }
 
 .header--input:focus {
@@ -128,32 +170,37 @@ p {
   font-weight: 300;
 }
 
+@media (max-width: 599px) {
+  .header--cities {
+    width: 100vw;
+    position: relative;
+    top: 10px;
+    left: -40px;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header--cities__mobile-line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+    height: 1px;
+    width: 100vw;
+    background-color: gray;
+  }
+}
+
 .header--cities:hover,
 .header--cities:focus {
   background-color: whitesmoke;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
-  height: 100%;
-}
-
-.itemCard--icon__active {
-  width: 80px;
-  height: 80px;
-  /* margin-right: 15px; */
-}
+/* DAYCHOOSE */
 
 .dayChoose--section {
   background-image: url(./components/utils/img/@1x-G5_sunny-intervals-day.jpg);
-}
-
-.dayChoose--list {
-  display: flex;
-  align-items: flex-end;
 }
 
 .dayChoose--cityName {
@@ -163,6 +210,17 @@ p {
   margin-bottom: 20px;
 }
 
+.dayChoose--list {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ACTIVECARD */
+
+.dayChoose--item__active:hover .itemCard--title {
+  text-decoration: underline;
+}
+
 .dayChoose--itemCard__active {
   background-color: white;
   border-top: 8px solid #f26a30;
@@ -170,10 +228,6 @@ p {
   border-bottom: 1px solid #ced0d1;
   cursor: pointer;
   border-left: 1px solid #ced0d1;
-}
-
-.dayChoose--item__active:hover .itemCard--title {
-  text-decoration: underline;
 }
 
 .dayChoose--itemCard__active {
@@ -189,6 +243,12 @@ p {
 
 .itemCard--info__active {
   display: flex;
+}
+
+.itemCard--icon__active {
+  width: 80px;
+  height: 80px;
+  /* margin-right: 15px; */
 }
 
 .itemCard--degrees__position {
@@ -224,6 +284,8 @@ p {
   font-weight: 400;
 }
 
+/* CASUALCARD */
+
 .dayChoose--itemCard {
   background-color: white;
   padding: 8px;
@@ -258,6 +320,8 @@ p {
   height: 48px;
 }
 
+/* FORECASTPERHOURLIST */
+
 .forecastPerHour--list {
   display: flex;
   overflow: scroll;
@@ -267,6 +331,8 @@ p {
 .forecastPerHour--list li:last-child {
   border-right: 1px solid #ced0d1;
 }
+
+/* FORECASTPERHOURITEM */
 
 .forecastPerHour--item {
   display: flex;
