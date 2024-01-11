@@ -59,20 +59,22 @@ export const Header = props => {
                 handleChange(e);
               }}
             />
-
             {citiesName ? (
               citiesName.map((city, index) => {
                 const { name, country } = city;
 
                 return (
-                  <button
-                    type="submit"
-                    key={index}
-                    className="header--cities"
-                    onClick={chooseCity}
-                  >
-                    {name}, {country === 'Russia' ? 'swamp' : country}
-                  </button>
+                  <>
+                    <button
+                      type="submit"
+                      key={index}
+                      className="header--cities"
+                      onClick={chooseCity}
+                    >
+                      {name}, {country === 'Russia' ? 'swamp' : country}
+                      <span className="header--cities__mobile-line" />
+                    </button>
+                  </>
                 );
               })
             ) : (
