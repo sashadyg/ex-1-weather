@@ -203,6 +203,12 @@ p {
   background-image: url(./components/utils/img/@1x-G5_sunny-intervals-day.jpg);
 }
 
+@media (max-width: 599px) {
+  .dayChoose--section {
+    width: 100vw;
+  }
+}
+
 .dayChoose--cityName {
   font-size: 28px;
   color: white;
@@ -213,6 +219,12 @@ p {
 .dayChoose--list {
   display: flex;
   align-items: flex-end;
+}
+
+@media (max-width: 599px) {
+  .dayChoose--list {
+    overflow: scroll;
+  }
 }
 
 /* ACTIVECARD */
@@ -295,13 +307,20 @@ p {
   cursor: pointer;
 }
 
+.dayChoose--itemCard__borderTop {
+  border-bottom: none;
+  border-top: 6px solid #f26a30;
+}
+
 .dayChoose--itemCard:hover .itemCard--day {
   text-decoration: underline;
 }
 
-.dayChoose--itemCard:hover {
-  border-bottom: 6px solid white;
-  border-top: 6px solid #f26a30;
+@media (min-width: 600px) {
+  .dayChoose--itemCard:hover {
+    border-bottom: 6px solid white;
+    border-top: 6px solid #f26a30;
+  }
 }
 
 .itemCard--day {
