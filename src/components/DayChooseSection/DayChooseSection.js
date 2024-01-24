@@ -5,6 +5,7 @@ import { CasualCard } from './CasualCard/CasualCard';
 export const DayChooseSection = props => {
   const forecast = props?.forecast?.forecast?.forecastday;
   const currentDay = props.currentDay;
+  const widhtOfScreen = window.innerWidth;
 
   const handleClick = e => {
     props.changeCurrentDay(Number(e.currentTarget.getAttribute('index')));
@@ -17,7 +18,7 @@ export const DayChooseSection = props => {
 
         <ul className="dayChoose--list">
           {forecast?.map((day, index) =>
-            index === currentDay ? (
+            index === currentDay && widhtOfScreen > 599 ? (
               <ActiveCard
                 forecast={forecast}
                 currentDay={currentDay}
