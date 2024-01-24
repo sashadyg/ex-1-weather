@@ -1,7 +1,7 @@
 import { getForecastDay } from 'components/utils/js/getForecastDay';
 
 export const CasualCard = props => {
-  const { forecast, index } = props;
+  const { forecast, index, currentDay } = props;
 
   return (
     <li
@@ -9,7 +9,13 @@ export const CasualCard = props => {
       onClick={props?.onClick}
       index={props.index}
     >
-      <div className="dayChoose--itemCard">
+      <div
+        className={
+          index === currentDay
+            ? 'dayChoose--itemCard dayChoose--itemCard__borderTop'
+            : 'dayChoose--itemCard'
+        }
+      >
         <p className="itemCard--day">
           {index === 0 ? 'Today' : getForecastDay(forecast[index]?.date)}
         </p>
