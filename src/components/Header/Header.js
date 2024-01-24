@@ -64,17 +64,15 @@ export const Header = props => {
                 const { name, country } = city;
 
                 return (
-                  <>
-                    <button
-                      type="submit"
-                      key={index}
-                      className="header--cities"
-                      onClick={chooseCity}
-                    >
-                      {name}, {country === 'Russia' ? 'swamp' : country}
-                      <span className="header--cities__mobile-line" />
-                    </button>
-                  </>
+                  <button
+                    type="submit"
+                    key={index}
+                    className="header--cities"
+                    onClick={chooseCity}
+                  >
+                    {name}, {country === 'Russia' ? 'swamp' : country}
+                    <span className="header--cities__mobile-line" />
+                  </button>
                 );
               })
             ) : (
