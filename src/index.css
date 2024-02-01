@@ -347,12 +347,6 @@ p {
   overflow-y: hidden;
 }
 
-/* @media (max-width: 599px) {
-  .forecastPerHour--list {
-    max-width: calc(100% - 40px);
-  }
-} */
-
 .forecastPerHour--list li:last-child {
   border-right: 1px solid #ced0d1;
 }
