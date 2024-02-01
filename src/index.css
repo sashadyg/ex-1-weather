@@ -10,6 +10,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: black; */
   position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -75,7 +78,7 @@ p {
   height: 100%;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 1280px) {
   .container {
     width: calc(100vw - 40px);
   }
@@ -98,7 +101,11 @@ p {
   margin: 0 auto;
   padding: 5px 20px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -138,6 +145,7 @@ p {
   height: 50px;
   font-size: large;
   padding: 0px 8px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ced0d1;
@@ -217,7 +225,11 @@ p {
 }
 
 .dayChoose--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
 }
 
@@ -254,6 +266,8 @@ p {
 }
 
 .itemCard--info__active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -264,7 +278,12 @@ p {
 }
 
 .itemCard--degrees__position {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -330,7 +349,11 @@ p {
 }
 
 .itemCard--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -342,6 +365,8 @@ p {
 /* FORECASTPERHOURLIST */
 
 .forecastPerHour--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
@@ -354,13 +379,24 @@ p {
 /* FORECASTPERHOURITEM */
 
 .forecastPerHour--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 70px;
   border-left: 1px solid #ced0d1;
   border-top: 3px solid white;
+  -webkit-transition-property: border-top;
+  -o-transition-property: border-top;
   transition-property: border-top;
+  -webkit-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
@@ -390,7 +426,11 @@ p {
 }
 
 .forecastPerHour--precipitation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 30px;
   margin-bottom: 20px;
