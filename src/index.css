@@ -236,6 +236,12 @@ p {
 @media (max-width: 599px) {
   .dayChoose--list {
     overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .dayChoose--list::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -370,6 +376,17 @@ p {
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
+}
+
+@media (max-width: 1280px) {
+  .forecastPerHour--list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .forecastPerHour--list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
 }
 
 .forecastPerHour--list li:last-child {
