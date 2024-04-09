@@ -365,7 +365,7 @@ p {
 
 /* FORECASTPERHOURLIST */
 
-.forecastPerHour--list {
+.forecast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,23 +374,23 @@ p {
 }
 
 @media (max-width: 1280px) {
-  .forecastPerHour--list::-webkit-scrollbar {
+  .forecast::-webkit-scrollbar {
     display: none;
   }
 
-  .forecastPerHour--list {
+  .forecast {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 }
 
-.forecastPerHour--list li:last-child {
+.forecast li:last-child {
   border-right: 1px solid #ced0d1;
 }
 
 /* FORECASTPERHOURITEM */
 
-.forecastPerHour--item {
+.forecast__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,32 +412,32 @@ p {
   transition-duration: 200ms;
 }
 
-.forecastPerHour--item:hover {
+.forecast__item:hover {
   border-top: 3px solid #f26a30;
 }
 
-.forecastPerHour--hour {
+.forecast-item__hour {
   font-size: 14px;
   margin-top: 5px;
 }
 
-.forecastPerHour--hour__span {
+.forecast-item__hour_span {
   font-weight: 700;
 }
 
-.forecastPerHour--icon {
+.forecast-item__icon {
   width: 40px;
   height: 40px;
   margin-top: 60px;
   color: gray;
 }
 
-.forecastPerHour--degrees {
+.forecast-item__degrees {
   font-size: 16px;
   font-weight: 600;
 }
 
-.forecastPerHour--precipitation {
+.forecast-item__precipitation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,13 +448,13 @@ p {
   margin-bottom: 20px;
 }
 
-.forecastPerHour--precipitation__procent {
+.forecast-item__precipitation_procent {
   font-size: 14px;
   font-weight: 600;
   color: gray;
 }
 
-.forecastPerHour--icon__precipitation {
+.forecast-item__icon_precipitation {
   width: 20px;
   height: 20px;
   padding-right: 6px;
