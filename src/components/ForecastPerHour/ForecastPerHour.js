@@ -6,7 +6,7 @@ export const ForecastPerHour = props => {
 
   return (
     <div className="container">
-      <ul className="forecastPerHour--list">
+      <ul className="forecast">
         {forecastPerHour?.map((hour, index) => {
           return <Card key={index} hour={hour} />;
         })}
