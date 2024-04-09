@@ -12,11 +12,11 @@ export const DayChooseSection = props => {
   };
 
   return (
-    <section className="dayChoose--section">
+    <section className="day-choose">
       <div className="container">
-        <h1 className="dayChoose--cityName">{props.cityName}</h1>
+        <h1 className="day-choose__city-title">{props.cityName}</h1>
 
-        <ul className="dayChoose--list">
+        <ul className="day-choose__list">
           {forecast?.map((day, index) =>
             index === currentDay && widhtOfScreen > 599 ? (
               <ActiveCard
@@ -30,7 +30,6 @@ export const DayChooseSection = props => {
                 onClick={handleClick}
                 index={index}
                 forecast={forecast}
-                currentDay={currentDay}
               />
             )
           )}
