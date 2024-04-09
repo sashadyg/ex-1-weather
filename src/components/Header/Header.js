@@ -35,12 +35,12 @@ export const Header = props => {
 
   return (
     <header className="header">
-      <div className="header--container">
-        <p className="header--logo">WEATHER</p>
+      <div className="header__container">
+        <p className="header__logo">WEATHER</p>
 
-        <div className="header--search">
+        <div className="header__search">
           <form
-            className="header--Form"
+            className="header__form"
             onSubmit={e => {
               formik.handleSubmit(e);
             }}
@@ -49,7 +49,7 @@ export const Header = props => {
               id="cityName"
               name="cityName"
               type="text"
-              className="header--input"
+              className="header__input"
               placeholder="Enter a city"
               autoComplete="off"
               value={formik.values.cityName}
@@ -67,11 +67,11 @@ export const Header = props => {
                   <button
                     type="submit"
                     key={index}
-                    className="header--cities"
+                    className="header__city"
                     onClick={chooseCity}
                   >
                     {name}, {country === 'Russia' ? 'swamp' : country}
-                    <span className="header--cities__mobile-line" />
+                    <span className="header__city_mobile-line" />
                   </button>
                 );
               })
