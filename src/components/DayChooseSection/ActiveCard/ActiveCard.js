@@ -4,35 +4,35 @@ export const ActiveCard = props => {
   const { forecast, currentDay } = props;
 
   return (
-    <li className="dayChoose--item__active">
-      <div className="dayChoose--itemCard__active">
-        <h1 className="itemCard--title">
+    <li className="active-card__item">
+      <div className="active-card">
+        <h1 className="active-card__title">
           {currentDay === 0
             ? 'Today'
             : getForecastDay(forecast[currentDay]?.date)}
         </h1>
 
-        <div className="itemCard--info__active">
+        <div className="active-card__info">
           {/* <svg className="itemCard--icon__active">
             <use href={sprite + '#icon-sun'}></use>
           </svg> */}
 
           <img
-            className="itemCard--icon__active"
+            className="active-card__icon"
             src={forecast[currentDay]?.day?.condition?.icon}
             alt="Icon of weather"
           />
-          <div className="itemCard--degrees__position">
-            <span className="itemCard--degrees itemCard--degrees__max itemCard--degrees__active">
+          <div className="degrees__position">
+            <span className="degrees active-card__degrees degrees__max">
               {Math.round(forecast[currentDay]?.day?.maxtemp_c)}°
             </span>
-            <span className="itemCard--degrees itemCard--degrees__active">
+            <span className="degrees active-card__degrees ">
               {Math.round(forecast[currentDay]?.day?.mintemp_c)}°
             </span>
           </div>
 
-          <div className="itemCard--textBlock">
-            <p className="itemCard--text">
+          <div className="active-card__text-block">
+            <p className="active-card__text">
               {forecast[currentDay]?.day?.condition?.text}
             </p>
           </div>
