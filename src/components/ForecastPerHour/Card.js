@@ -5,27 +5,27 @@ export const Card = props => {
 
   return (
     <li>
-      <div className="forecastPerHour--item">
-        <p className="forecastPerHour--hour">
-          <span className="forecastPerHour--hour__span">
+      <div className="forecast__item">
+        <p className="forecast-item__hour">
+          <span className="forecast-item__hour_span">
             {hour?.time?.slice(-5, -3)}
           </span>
           {hour?.time?.slice(-2)}
         </p>
 
         <img
-          className="forecastPerHour--icon"
+          className="forecast-item__icon"
           src={hour?.condition?.icon}
           alt={hour?.condition?.text}
         />
 
-        <p className="forecastPerHour--degrees">{Math.round(hour?.temp_c)}°</p>
+        <p className="forecast-item__degrees">{Math.round(hour?.temp_c)}°</p>
 
-        <div className="forecastPerHour--precipitation">
-          <svg className="forecastPerHour--icon__precipitation">
+        <div className="forecast-item__precipitation">
+          <svg className="forecast-item__icon_precipitation">
             <use href={sprite + '#icon-precipitation'}></use>
           </svg>
-          <p className="forecastPerHour--precipitation__procent">
+          <p className="forecast-item__precipitation_procent">
             {hour?.chance_of_rain}%
           </p>
         </div>
