@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ex-1-weather/static/css/main.fd4e6b7a.css",
-    "main.js": "/ex-1-weather/static/js/main.b066a66f.js",
+    "main.css": "/ex-1-weather/static/css/main.605a4554.css",
+    "main.js": "/ex-1-weather/static/js/main.90cfd0c3.js",
     "static/media/sprite.svg": "/ex-1-weather/static/media/sprite.2f2aa1973e4aed9c4e0c3ffe224705b6.svg",
     "static/media/@1x-G5_sunny-intervals-day.jpg": "/ex-1-weather/static/media/@1x-G5_sunny-intervals-day.ba38cb96d4ddc197e39f.jpg",
     "index.html": "/ex-1-weather/index.html",
-    "main.fd4e6b7a.css.map": "/ex-1-weather/static/css/main.fd4e6b7a.css.map",
-    "main.b066a66f.js.map": "/ex-1-weather/static/js/main.b066a66f.js.map"
+    "main.605a4554.css.map": "/ex-1-weather/static/css/main.605a4554.css.map",
+    "main.90cfd0c3.js.map": "/ex-1-weather/static/js/main.90cfd0c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd4e6b7a.css",
-    "static/js/main.b066a66f.js"
+    "static/css/main.605a4554.css",
+    "static/js/main.90cfd0c3.js"
   ]
 }
