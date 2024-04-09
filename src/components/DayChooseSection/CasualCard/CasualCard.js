@@ -1,37 +1,31 @@
 import { getForecastDay } from 'components/utils/js/getForecastDay';
 
 export const CasualCard = props => {
-  const { forecast, index, currentDay } = props;
+  const { forecast, index } = props;
 
   return (
     <li
-      className="dayChoose--item"
+      className="day-choose__item"
       onClick={props?.onClick}
       index={props.index}
     >
-      <div
-        className={
-          index === currentDay
-            ? 'dayChoose--itemCard dayChoose--itemCard__borderTop'
-            : 'dayChoose--itemCard'
-        }
-      >
-        <p className="itemCard--day">
+      <div className="casual-card">
+        <p className="casual-card__day">
           {index === 0 ? 'Today' : getForecastDay(forecast[index]?.date)}
         </p>
 
-        <div className="itemCard--info">
+        <div className="casual-card__info">
           <img
-            className="itemCard--icon"
+            className="casual-card__icon"
             src={forecast[index]?.day?.condition?.icon}
             alt="Icon of weather"
           />
 
-          <div className="itemCard--degrees__position">
-            <span className="itemCard--degrees itemCard--degrees__max">
+          <div className="degrees__position">
+            <span className="degrees degrees__max">
               {Math.round(forecast[index]?.day?.maxtemp_c)}°
             </span>
-            <span className="itemCard--degrees itemCard--degrees__min">
+            <span className="degrees">
               {Math.round(forecast[index]?.day?.mintemp_c)}°
             </span>
           </div>
